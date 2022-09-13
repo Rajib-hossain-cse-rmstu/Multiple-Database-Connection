@@ -15,6 +15,19 @@ return new class extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('details');
+            $table->double('price');
+            $table->double('quantity');
+            $table->timestamps();
+        });
+
+        Schema::connection('mysql_2')->create('products', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('details');
+            $table->double('price');
+            $table->double('quantity');
             $table->timestamps();
         });
     }
