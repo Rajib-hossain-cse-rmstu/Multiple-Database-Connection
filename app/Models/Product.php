@@ -9,5 +9,5 @@ class Product extends Model
 {
     use HasFactory;
     protected $guarded=[];
-    protected $connection = 'mysql_2';
+    // protected $connection = 'mysql_2';
 }
